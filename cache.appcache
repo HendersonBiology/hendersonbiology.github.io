@@ -2,3 +2,29 @@ CACHE MANIFEST
 # Cache Manifest for Ms. Henderson's Biology Website (http://hendersonbiology.github.io) - so this beautiful Biology resource can be viewed offline!
 # Currently in v1
 # Developed by Donald Leung (http://donaldkellett.github.io)
+css/font-awesome.min.css
+css/skel.css
+css/style-large.css
+css/style-medium.css
+css/style-small.css
+css/style-xlarge.css
+css/style-xsmall.css
+css/style.css
+fonts/fontawesome-webfont.eot
+fonts/fontawesome-webfont.svg
+fonts/fontawesome-webfont.ttf
+fonts/fontawesome-webfont.woff
+fonts/fontawesome-webfont.woff2
+fonts/FontAwesome.otf
+images/pic01.jpg
+images/pic02.jpg
+elements.html
+js/html5shiv.js
+js/init.js
+js/jquery.min.js
+js/skel-layers.min.js
+js/skel.min.js
+LICENSE.txt
+NETWORK:
+README.md
+README.txt
