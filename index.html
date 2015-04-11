@@ -62,7 +62,14 @@
 				var w = new Worker("timeVisited.webworker.js");
 				function startTiming () {
 					w.onmessage = function (event) {
-						document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology by visiting this site for " + event.data + " seconds.  Good job!";
+						var seconds = event.data;
+						var minutes = 0;
+						var hours = 0;
+						if (seconds < 60) {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+seconds+" seconds.  Good job!";}
+						else if (seconds >= 60 && seconds < 3600) {
+							for (j = 0; j < 60; j++) {if (seconds >= 60) {seconds -= 60; minutes += 1;}}
+							document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+minutes+" minutes and "+seconds+" seconds.  Good job!";
+						} else {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for over an hour.  Good job!"}
 					}
 				};
 
