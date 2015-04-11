@@ -64,12 +64,11 @@
 					w.onmessage = function (event) {
 						var seconds = event.data;
 						var minutes = 0;
-						var hours = 0;
-						if (seconds < 60) {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+seconds+" seconds.  Good job!";}
+						if (seconds < 60) {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+seconds+" seconds.  Keep it up!";}
 						else if (seconds >= 60 && seconds < 3600) {
 							for (j = 0; j < 60; j++) {if (seconds >= 60) {seconds -= 60; minutes += 1;}}
-							document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+minutes+" minutes and "+seconds+" seconds.  Good job!";
-						} else {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for over an hour.  Good job!"}
+							document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+minutes+" minutes and "+seconds+" seconds.  Keep it up!";
+						} else {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for over an hour.  Fabulous!"}
 					}
 				};
 
