@@ -41,37 +41,33 @@
 		<!-- Main -->
 			<div id="main" class="container">
 
-				<script>
-				// Generate HTML content in the <div> with id="main" using Javascript (useful when used in conjunction with a password, since it makes content secure (the secure content cannot be accessed unless Javascript is enabled))
-				document.getElementById("main").innerHTML = 
-				"<div class='row'>"
-					+ "<div class='12u$'>"
-						+ "<h2>Ms. Henderson's Biology Website - Coming Soon</h2>"
-						+ "<p>Redirecting to the 'Coming Soon' page ...</p>"
-					+ "</div>"
-				+ "</div>";
-				// Redirect to the 'Coming Soon' page (Remove when website is complete and functional)
-				window.location = 'http://hendersonbiology.github.io/not-available.html';
-				</script>
+				<em><small id="timeVisited"></small></em>
 
-				<noscript>
-					<div class="row">
-						<div class="12u$">
-							<h2>Javascript Disabled</h2>
-							<p>Please enable your Javascript to enjoy all the services provided by this website, because some content in this website is generated using Javascript.  For now, please redirect to this page manually by clicking on the link: <a href="http://hendersonbiology.github.io/not-available.html">http://hendersonbiology.github.io/not-available.html</a>.</p>
-							<h3>Friendly Reminder</h3>
-							<p>Please also check if you have disabled Caches.  <strong>Offline browsing</strong> only works if you have Caches enabled.  <a href="http://www.w3schools.com/html/html5_app_cache.asp" target="_blank">What's that?</a></p>
-						</div>
+				<div class="row">
+					<div class="12u$">
+						<h2>Ms. Henderson's Biology Website - Coming Soon</h2>
+						<p>Ms. Henderson's Biology Website for 2014-2015 Year 11 Set 1 is coming soon!  Remember to check regularly!</p>
+						<p>Once the website is up and running, it will contain the following features:</p>
+						<ul>
+							<li>Lots of professional* Biology videos on the theme of Ecosystems (Unit B6 in the specification)</li>
+							<li><strong>Offline browsing</strong> so you can use this website to revise even if there is no internet connection available (only works if <a href="http://www.w3schools.com/html/html5_app_cache.asp" target="_blank">caches</a> are enabled)</li>
+						</ul>
+						<p>... and much, much more!</p>
+						<p style="font-size: 0.9em;">* Year 11 IGCSE Biology Set 1 is professional, don't you agree?</p>
+						<p>In the meantime, why don't you <a href="http://qualifications.pearson.com/en/support/support-topics/exams/past-papers.html?Qualification-Family=International-GCSE&amp;Qualification-Subject=Biology%20(2011)&amp;Status=Pearson-UK:Status%2FLive&amp;Specification-Code=Pearson-UK:Specification-Code%2Figcse11-biology" target="_blank">complete some past papers</a> for revision?</p>
 					</div>
-					<hr class="major" style="display: none;" />
-					<div class="row" style="display: none;">
-						<div class="12u$">
-							<h2>Styles Disabled</h2>
-							<p><strong>Please enable styles, because this page will not display properly without styles.</strong></p>
-						</div>
-					</div>
-					<hr class="major" style="display: none;" />
-				</noscript>
+				</div>
+
+				<script type="text/javascript">
+				var w = new Worker("timeVisited.webworker.js");
+				function startTiming () {
+					w.onmessage = function (event) {
+						document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology by visiting this site for " + event.data + " seconds.  Good job!";
+					}
+				};
+
+				startTiming();
+				</script>
 
 			</div>
 

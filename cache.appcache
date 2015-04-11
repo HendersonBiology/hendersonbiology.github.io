@@ -2,6 +2,8 @@ CACHE MANIFEST
 # Cache Manifest for Ms. Henderson's Biology Website (http://hendersonbiology.github.io) - so this beautiful Biology resource can be viewed offline!
 # Currently in v14
 # Developed by Donald Leung (http://donaldkellett.github.io)
+
+# Basic resources
 favicon.ico
 css/font-awesome.min.css
 css/skel.css
@@ -19,13 +21,19 @@ fonts/fontawesome-webfont.woff2
 fonts/FontAwesome.otf
 images/pic01.jpg
 images/pic02.jpg
-elements.html
 js/html5shiv.js
 js/init.js
 js/jquery.min.js
 js/skel-layers.min.js
 js/skel.min.js
 LICENSE.txt
+# Other resources and widgets
+timeVisited.webworker.js
+
+# And, a file specifically for my own reference
+elements.html
+
+# The files below require an Internet connection
 NETWORK:
 README.md
 README.txt
