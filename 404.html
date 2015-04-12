@@ -46,7 +46,12 @@
 							<p><a class="button" href="/">Turn Back</a></p>
 							<p><em><small style="font-size: smaller;" id="timer"></small></em></p>
 							<script type="text/javascript">
-							var timer = new Worker ("http://hendersonbiology.github.io/timedRedirect.404.webworker.js");
+							var timerToTimeBeforeRedirect = new Worker ("http://hendersonbiology.github.io/timedRedirect.404.webworker.js");
+							function timedRedirectToHomepage() {
+								timerToTimeBeforeRedirect.onmessage = function (event) {
+									if (event.data <= 0) {document.getElementById("timer").innerHTML = "You will now be redirected back to the homepage."; window.location = "http://hendersonbiology.github.io";} else {document.getElementById("timer").innerHTML = "You will be automatically redirected to the homepage in "+ event.data +" seconds.";}
+								}
+							}
 							</script>
 						</div>
 					</div>
