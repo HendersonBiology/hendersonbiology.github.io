@@ -27,8 +27,10 @@ js/jquery.min.js
 js/skel-layers.min.js
 js/skel.min.js
 LICENSE.txt
+
 # Other resources and widgets
 timeVisited.webworker.js
+timedRedirect.404.webworker.js
 
 # And, a file specifically for my own reference
 elements.html
