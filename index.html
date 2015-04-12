@@ -58,22 +58,24 @@
 					</div>
 				</div>
 
-				<script type="text/javascript">
-				var w = new Worker("timeVisited.webworker.js");
-				function startTiming () {
-					w.onmessage = function (event) {
-						var seconds = event.data;
-						var minutes = 0;
-						if (seconds < 60) {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+seconds+" seconds.  Keep it up!";}
-						else if (seconds >= 60 && seconds < 3600) {
-							for (j = 0; j < 60; j++) {if (seconds >= 60) {seconds -= 60; minutes += 1;}}
-							document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+minutes+" minutes and "+seconds+" seconds.  Keep it up!";
-						} else {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for over an hour.  Fabulous!"}
-					}
-				};
+				<div id="script-wrapper">
+					<script type="text/javascript">
+					var w = new Worker("timeVisited.webworker.js");
+					function startTiming () {
+						w.onmessage = function (event) {
+							var seconds = event.data;
+							var minutes = 0;
+							if (seconds < 60) {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+seconds+" seconds.  Keep it up!";}
+							else if (seconds >= 60 && seconds < 3600) {
+								for (j = 0; j < 60; j++) {if (seconds >= 60) {seconds -= 60; minutes += 1;}}
+								document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for "+minutes+" minutes and "+seconds+" seconds.  Keep it up!";
+							} else {document.getElementById("timeVisited").innerHTML = "You have revised I/GCSE Biology using this website for over an hour.  Fabulous!"; document.getElementById("script-wrapper").innerHTML = "<!-- Script successfully deleted -->";}
+						}
+					};
 
-				startTiming();
-				</script>
+					startTiming();
+					</script>
+				</div>
 
 			</div>
 
