@@ -32,6 +32,7 @@ LICENSE.txt
 timeVisited.webworker.js
 timedRedirect.404.webworker.js
 demo/video.mp4
+demo.zip
 
 # And, a file specifically for my own reference
 elements.html
