@@ -28,6 +28,10 @@ js/skel-layers.min.js
 js/skel.min.js
 LICENSE.txt
 
+# Our precious videos
+IGCSE-Biology-B6-Videos/Greenhouse-Gases-And-Global-Warming.mp4
+IGCSE-Biology-B6-Videos/Greenhouse-Gases-And-Global-Warming.mp4.zip
+
 # Other resources and widgets
 timeVisited.webworker.js
 timedRedirect.404.webworker.js
