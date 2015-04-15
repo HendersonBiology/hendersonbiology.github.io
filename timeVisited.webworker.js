@@ -1,3 +1,5 @@
+// Developed by Donald Leung (http://donaldkellett.github.io)
+
 var i = 0;
 
 function countTimeVisited() {

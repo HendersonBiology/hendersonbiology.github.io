@@ -1,0 +1,2 @@
+This website is exempted from certain terms listed on Donald Leung's Widget License for the following reason: This website, owned by Ms. Kirsty Henderson, is developed and maintained by Donald Leung.
+To verify this exemption, please go to http://donaldkellett.github.io/widgets/LICENSE.txt
